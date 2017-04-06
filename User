@@ -1,0 +1,93 @@
+/**
+ * 用户类
+ * [url=home.php?mod=space&uid=9083]@author[/url] www.shiyanlou.com
+ *
+ */
+@SuppressWarnings("serial")
+public class User implements Serializable {
+    private int id;    //用户ID
+    private String username;    //用户名
+    private String password;    //密码
+    private List<Image> images;    //图片列表
+    public User() {
+    }
+    public User(int id, String username, String password, List<Image> images) {
+        this.id = id;
+        this.username = username;
+        this.password = password;
+        this.images = images;
+    }
+    public User(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
+    public User(int id) {
+        this.id = id;
+    }
+    public List<Image> getImages() {
+        return images;
+    }
+    public void setImages(List<Image> images) {
+        this.images = images;
+    }
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getUsername() {
+        return username;
+    }
+    public void setUsername(String username) {
+        this.username = username;
+    }
+    public String getPassword() {
+        return password;
+    }
+    public void setPassword(String password) {
+        this.password = password;
+    }
+}创建Image类：   /**
+ * 图片类
+ * @author www.shiyanlou.com
+ *
+ */
+@SuppressWarnings("serial")
+public class Image implements Serializable {
+    private int id;    //图片ID
+    private String name;    //图片名
+    private String url;    //图片URL
+    private Date date;    //上传时间
+    private User user;    //所属用户
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public String getUrl() {
+        return url;
+    }
+    public void setUrl(String url) {
+        this.url = url;
+    }
+    public Date getDate() {
+        return date;
+    }
+    public void setDate(Date date) {
+        this.date = date;
+    }
+    public User getUser() {
+        return user;
+    }
+    public void setUser(User user) {
+        this.user = user;
+    }
+}
